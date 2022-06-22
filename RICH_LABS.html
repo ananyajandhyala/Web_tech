@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>the rich lab</title>
+    </head>
+    <link rel ="stylesheet" type="text/css" href="mystyle.css"/>
+<body style="background: rgb(245, 245, 192);">
+
+    <style>
+        #color{
+            background-color:rgb(243, 169, 72);
+            font-style:italic;
+            text-align: center;
+            font-variant: inherit;
+        }
+        .colorh2{
+            background-color:rgb(253, 219, 70);
+            font-style: italic;
+            text-align: center;
+            font-variant: inherit;
+        }
+    </style>
+    <div style="background: rgb(189, 255, 159);">
+        <h1 id = "color">BE YOUR OWN BUFFET</h1>
+        <h2 class = "colorh2"> JOIN OUR CASH FLOW CLUB</h2>
+        <h3 class = "colorh3"> BE A PART OF A MILLION DOLLAR BUNDLE!!!</h3>
+        <h4>SIGN UP FORM </h4>
+        <link rel ="stylesheet" type = "text/css" href ="style.css"/>
+    </div>
+    <p> Want to get FINANCE-SAVVY? Subscribe below, for simplified newsletters, get access to masterclasses, blogs breaking down the basics and mantras of industry experts.</p> 
+    Thank you for sparing a few moments to complete our short survey.  All personal information collected within this survey will remain completely confidential.</p>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    <img src="cf4.jpg" alt ="CASH FLOW" style = "float: right"/>
+    <form id="form1" method = "get" action = "cashflow.html" target = "_blank" onsubmit="fn1()" > 
+    FIRST NAME*: <input type ="text" name = "uname" required></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    LAST NAME*: <input type ="text" name = "uname" required ></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    SRN*:<input type ="text" pattern="PES2UG20+++" maxlength="13"></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    SEMESTER*:<input type ="text" name = "3" pattern = "[1-8]{1}"required></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    SECTION*: <input type ="text" name = "A" required></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    CLUB NAME: <input type ="text" name = "BLUE PRINT"></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    EMAIL ADDRESS*: <input type ="email" name = "abc@gmail.com" pattern=".+@gmail\.com" required></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    PHONE NUMBER*: <input type="tel" pattern="[0-9]{10}"></input></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    required fields = *
+    </br>
+    ANY EXTERNAL CERTIFICATE COURSES: <textarea name = "cryptocurrencies" rows = "3" cols = "50" ></textarea></br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    Which of the following fields appeals to your interests and skillset:</br>
+    Real Estate, Stock Trading and Personal Finance Coaching.</br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    1.<input type = "checkbox" name="xyz" value="Personal Finane"/>Personal Finane</br>
+    </br>
+    2.<input type = "checkbox" name="xyz" value="Stock Trading"/>stock trading</br>
+    </br>
+    3.<input type = "checkbox" name="xyz" value="real Estate"/>Personal Finane</br>
+    </br>
+    4.<input type = "checkbox" name="xyz" value="real Estate"/>Cryptocurrencies</br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    Where we can help you:  </br>
+     <input type = "radio" name="xyz" value="advanced BI"/>Access financial data in real time with advanced BI
+    </br>
+    <input type = "radio" name="xyz" value="operatinal excellence"/>Achieve operational excellence
+    </br>
+    <input type = "radio" name="xyz" value="profits"/>Provide tailored solutions to boost profitbility
+    </br>
+    <input type = "radio" name="xyz" value="business obejcives"/>streamline your processes to focus on your core business objectives
+    </br>
+    </br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    Our solutions:
+    <select id = "dropdown" name ="solution" multiple>
+        <option value="1."> Workflow Management </option>
+        <option value="2."> Resource Management </option>
+        <option value="3."> Metadata Management </option>
+        <option value="4.">  Business Intelligence </option>
+    </select>
+    </br>
+    ---------------------------------------------------------------------------------------------------------------------------------------------
+    </br>
+    </br>
+    It's About Much More Than Money.</br>
+    To Learn more, join the community at
+    <a href="https://www.richdad.com/communityregister">
+    RICHLABS
+    </a>
+    </br>    
+    </br>
+    <input type = "submit" value="SUBMIT" onclick="fn1()" onsubmit="fn1()"/>
+    <input type = "reset" value="RESET"/>
+    </form>
+    <div align = "right"><script src = "date.js"></script></div>
+    <div>
+        <img src="D:\WEB_TECH\WEB_TECH\smile.jpg" id="image1" height="250" width="250" style="visibility:hidden; float:left;"/>
+    </div>
+    <canvas id="canvas1" width="400" height="400" style="border:1px solid black;"></canvas>
+    <script>
+        function fn1(){
+            //document.getElementById('mycanvas1');//.style.visibility="visible";
+            var c=document.getElementById('canvas1');
+            var ctx=c.getContext("2d");
+            var img=document.getElementById('image1');
+            ctx.drawImage(img,0,0,400,400);
+        }
+    </script>
+    <script>
+        function imageShow(){
+        document.getElementById('image1').style.visibility="visible";
+        }
+        var b = document.querySelector("body");
+        b.addEventListner("click",myFunction);
+        
+        function myFunction(event) {
+        var x = event.target;
+        alert("Triggered by a " + x.tagName + " element");
+        }
+        
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>"
+    <script>
+        $(document).ready(function(){
+         $("#button1").click(function(){
+        $("p").hide();
+         });
+        });
+        </script>
+        <br>
+        <script>
+        $(document).ready(function(){
+         $("#button2").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(1000);
+         });
+        });
+        </script>
+        <script>
+        $(document).ready(function(){
+         $("#button3").click(function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(1000);
+        });
+        });
+        </script>
+        <title>Json data</title>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.mi
+        n.css"/>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.j
+        s"></script>
+        </head>
+        <body>
+        <h3><p>CHECK THIS OUT!!!</p></h3>
+        <button id="button1">HIDE</button>
+        <button id="button2">FADE IN</button>
+        <div id="div1" style="width:80px;height:80px;display:none;"></div><br>
+        <div id="div2" style="width:80px;height:80px;display:none;"></div><br>
+        <div id="div3" style="width:80px;height:80px;display:none;"></div>
+        <button id="button3">FADE OUT</button>
+        </script>
+
+</body>
+</html>
