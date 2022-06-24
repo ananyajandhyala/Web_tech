@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 style="text-align: center">FRUIT HAVEN</h1>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <style>
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+            body{
+                background : linear-gradient(#fd966d, #ff3535ec);
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "main" style = "padding-top : 10px"></div>
+        <div class = "bill" style = "padding : 5px;"></div>
+        <script type = "text/babel">
+            class Food extends React.Component{
+                render(){
+                    return(
+                       <div class = "fooditem">
+                           <div class = "image">
+                            <img src = {this.props.image}></img>
+                           </div>
+                           <div class = "name">
+                                <span>Name : {this.props.name}</span>
+                           </div>
+                           <div class = "price">
+                                <span>Price : Rs.{this.props.price}</span>
+                            </div>
+                            <div class = "qty">
+                                <Form num = {this.props.num}></Form>
+                            </div>
+                       </div> 
+                    )
+                }
+            }
+            class Form extends React.Component{
+                Change(element){
+                    /*console.log(document.querySelectorAll("").length)*/
+                    var forms = document.querySelectorAll(".inp_qty")
+                    var qty_0 = forms[0].value * 1;
+                    var qty_1 = forms[1].value * 1;
+                    var qty_2 = forms[2].value * 1;
+                    var final_quantity = qty_0 + qty_1 + qty_2;
+                    var final_price = qty_0 * 150 + qty_1 * 280 + qty_2 * 100;
+                    document.querySelector(".total_qty").textContent = (final_quantity);
+                    document.querySelector(".total_price").textContent = (final_price);
+                }
+                handleChange(event){
+                    this.setState({value : event.target.value});
+                }
+                render(){
+                    return(
+                        <form onChange = {this.Change}>
+                            <input class = "inp_qty" type = "number" min = "0" placeholder = "Enter Quantity" num = {this.props.num}/>
+                        </form>
+                    )
+                }
+            }
+            class Bill extends React.Component{
+                render(){
+                    return(
+                    <div class = "main_bill">
+                        <div class = "bill_title">
+                            <span>BILL</span>
+                        </div>
+                        <div class = "final_display">
+                            Total Quantity : <span class = "total_qty">0</span>   
+                        </div>
+                        <div class = "final_display">
+                            Total Price : Rs.<span class = "total_price">0</span>     
+                        </div>
+                    </div>
+                    )
+                }
+            }
+            ReactDOM.render(
+                <div class = "mainReact">
+                    <Food name = "MILKSHAKE" price = "150" image = "f_1.jpg" num = "1"></Food>
+                    <Food name = "ICE CREAM" price = "280" image = "f_2.jpg" num = "2"></Food>
+                    <Food name = "FRESH FRUIT" price = "100" image = "f_3.jpg" num = "3"></Food>  
+                </div>, document.querySelector(".main")
+            )
+            ReactDOM.render(
+                <div class = "bill_container">
+                    <Bill></Bill>
+                </div>, document.querySelector(".bill")
+            )
+        </script>
+        <style>
+            .fooditem{
+                display : grid;
+                grid-template-rows : auto auto auto;
+                border-radius : 12px;
+                width : 300px;
+                height : 460px;
+                margin : 40px;
+                margin-top : 10px;
+                margin-bottom : 0px;
+                background : linear-gradient(#914edff5, #ec6c88);
+            }
+            .image{
+                display : flex;
+                align-items :center;
+                justify-content: center;
+                height : 240px;
+            }
+            .image img{
+                max-width : 250px;
+                height : 180px;
+                padding : 0px;
+                border-radius : 10px;
+            }
+            .mainReact{
+                display : flex;
+                align-items : center;
+                justify-content: center;
+            }
+            .name, .price, .qty{
+                text-align: center;
+                align-items : center;
+                display : flex;
+                justify-content: center;
+                margin : 7px;
+            }
+            .name span, .price span{
+                font-size: 18px;
+                background-color : #ff8f26;
+                width : 200px;
+                height : 38px;
+                align-items : center;
+                display : flex;
+                justify-content: center;
+                border-radius : 5px;
+            }
+            .inp_qty{
+                font-size : 16px;
+                width : 130px;
+                padding : 5px;
+                margin-bottom : 20px;
+                margin-top : 6px;
+                margin-bottom : 20px;
+                border-radius : 5px;
+                text-align: center;
+            }
+            .bill_container{
+                display : flex;
+                align-items: center;
+                justify-content: center;
+                margin-top : 20px;
+            }
+            .main_bill{
+                background : linear-gradient(#e7346a, #c54df5);
+                width : 1000px;
+                height : 300px;
+                border-radius: 10px;
+                display : grid;
+                align-items : center;
+                justify-content: center;
+                grid-template-rows: auto auto auto auto;
+                border : solid black 1px;
+            }
+            .bill_title{
+                font-size: 26px;
+                font-weight : 550;
+                border-radius : 10px;
+                padding : 5px 20px 5px 20px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                color : rgb(20, 14, 4);
+                font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+            tr, td{
+                text-align: center;
+                align-items : center;
+            }
+            .final_display{
+                text-align : center;
+                align-items: center;
+                font-size: 28px;
+                color : black;
+                padding : 15px;
+                border-radius : 8px;
+                max-width : 900px;
+                min-width : 500px;
+                background : linear-gradient(#f3c33f, #f89b4f, #f04242);
+            }
+        </style>
+    </body>
+</html>
