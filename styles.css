@@ -109,14 +109,17 @@ h2 {
   padding: 0.8rem;
 }
 
-.impact-card strong {
+.impact-value {
   display: block;
+  margin: 0;
   font-size: 1.4rem;
   color: #1d4ed8;
+  font-weight: 800;
 }
 
-.impact-card span {
+.impact-label {
   display: block;
+  margin: 0.25rem 0 0;
   margin-top: 0.25rem;
   color: #334155;
   font-size: 0.9rem;
