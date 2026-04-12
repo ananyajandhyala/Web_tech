@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanshika Thakkar | Product Portfolio</title>
+    <meta
+      name="description"
+      content="Dynamic product portfolio for Vanshika Thakkar - Product Analyst with strong delivery and analytics experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Product Portfolio</p>
+        <h1 id="name"></h1>
+        <p id="headline" class="headline"></p>
+        <div id="contact-links" class="contact-links"></div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>Impact Dashboard</h2>
+        <p class="section-subtitle">
+          Key outcomes automatically summarized from experience highlights.
+        </p>
+        <div id="impact-grid" class="impact-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Professional Experience</h2>
+          <label for="experience-filter" class="control-label">Filter by company</label>
+          <select id="experience-filter" class="control"></select>
+        </div>
+        <div id="experience-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Academic Projects</h2>
+          <label for="project-search" class="control-label">Search projects</label>
+          <input
+            id="project-search"
+            class="control"
+            type="search"
+            placeholder="Try: SQL, MVP, dashboard..."
+          />
+        </div>
+        <div id="projects-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <div id="skill-tabs" class="tabs"></div>
+        </div>
+        <ul id="skills-list" class="skills-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Education</h2>
+        <div id="education-list" class="stack-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Built as a dynamic portfolio page for
+          <strong id="footer-name"></strong>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
